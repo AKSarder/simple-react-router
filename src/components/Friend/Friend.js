@@ -10,9 +10,11 @@ const Friend = (props) => {
         padding: '10px',
         borderRadius: '10px'
     };
+    // const url=`/friend/${id}`
     const url = `/friend/${id}`;
 
     const handleFriendClick = () => {
+        history.push('/home');
         history.push(`/friend/${id}`);
     }
 
@@ -28,6 +30,7 @@ const Friend = (props) => {
                 <button>Visit Me</button>
             </Link>
             <br />
+            <button onClick={handleFriendClick}></button>
             <button onClick={handleFriendClick}>Visit me 2</button>
         </div>
     );
